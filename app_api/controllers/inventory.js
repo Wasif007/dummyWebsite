@@ -7,7 +7,11 @@ var sendJSONresponse = function(res, status, content) {
 };
 
 module.exports.inventoryList = function(req, res) {
-  Inv.create({
+  
+};
+
+module.exports.inventoryAdd = function(req, res) {
+ Inv.create({
     name: req.body.name,
     quantity: req.body.quantity,
     size: req.body.size,
@@ -24,12 +28,6 @@ module.exports.inventoryList = function(req, res) {
       sendJSONresponse(res, 200, inventoryAdded);
     }
   });
-};
-
-module.exports.inventoryAdd = function(req, res) {
- sendJSONresponse(res,200,{
- 	"Message":"Hello Add"
- })
 };
 
 module.exports.inventoryDelete = function(req, res) {
