@@ -7,9 +7,23 @@ var sendJSONresponse = function(res, status, content) {
 };
 
 module.exports.inventoryList = function(req, res) {
- sendJSONresponse(res,200,{
- 	"Message":"Hello"
- })
+  Inv.create({
+    name: req.body.name,
+    quantity: req.body.quantity,
+    size: req.body.size,
+    colour:req.body.colour,
+    article:req.body.article,
+    article_type:req.body.article_type,
+    price:req.body.price
+  }, function(err, inventoryAdded) {
+    if (err) {
+      console.log(err);
+      sendJSONresponse(res, 400, err);
+    } else {
+      console.log(inventoryAdded);
+      sendJSONresponse(res, 200, inventoryAdded);
+    }
+  });
 };
 
 module.exports.inventoryAdd = function(req, res) {
