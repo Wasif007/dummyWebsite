@@ -11,3 +11,21 @@ module.exports.inventoryList = function(req, res) {
  	"Message":"Hello"
  })
 };
+
+module.exports.inventoryAdd = function(req, res) {
+ sendJSONresponse(res,200,{
+ 	"Message":"Hello Add"
+ })
+};
+
+module.exports.inventoryDelete = function(req, res) {
+ sendJSONresponse(res,200,{
+ 	"Message":"Hello Delete"
+ })
+};
+
+module.exports.inventoryUpdate = function(req, res) {
+ sendJSONresponse(res,200,{
+ 	"Message":"Hello Update"
+ })
+};
