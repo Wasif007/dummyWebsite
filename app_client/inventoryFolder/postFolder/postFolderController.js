@@ -4,10 +4,10 @@
     .module('loc8rApp')
     .controller('postInventoryCtrl', postInventoryCtrl);
 
-    postInventoryCtrl.$inject = ['$http'];
+    postInventoryCtrl.$inject = ['postingInventory'];
 
-  function postInventoryCtrl($http) {
-   /* var vm = this;
+  function postInventoryCtrl(postingInventory) {
+    var vm = this;
 
     vm.credentials = {
       name : "",
@@ -38,12 +38,20 @@
 
     vm.doAddInventory = function() {
       vm.formError = "";
-  return $http.post('/api/addInventory',vm.credentials).success(function(data){
-console.log(data);
+   postingInventory
+        .assigningInventory(vm.credentials)
+        .error(function(err){
+         
+          vm.formError = err;
+        }
+        )
+        .then(function(){
+          $location.path('/');
+        });
     };
 
   
-*/
+
   }
 
 })();
