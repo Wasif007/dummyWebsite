@@ -7,7 +7,7 @@
     postInventoryCtrl.$inject = ['$http'];
 
   function postInventoryCtrl($http) {
-    var vm = this;
+   /* var vm = this;
 
     vm.credentials = {
       name : "",
@@ -43,7 +43,7 @@ console.log(data);
     };
 
   
-
+*/
   }
 
 })();
