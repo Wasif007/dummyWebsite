@@ -44,7 +44,11 @@
         controller:'loginCtrl',
         controllerAs:'vm'
       })
-      
+      .when('addingInventoryForm',{
+        templateUrl:'/inventoryFolder/postFolder/postFolderView.html',
+        controller:'postInventoryCtrl',
+        controllerAs:'vm'
+      })
       .otherwise({redirectTo: '/'});
 
     // use the HTML5 History API
