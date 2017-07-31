@@ -4,7 +4,7 @@
     .module('loc8rApp')
     .controller('postInventoryCtrl', postInventoryCtrl);
 
-    postInventoryCtrl.$inject = ['multipartForm'];
+    postInventoryCtrl.$inject = ['$http'];
 
   function postInventoryCtrl(authentication,multipartForm,$location) {
     var vm = this;
@@ -38,10 +38,8 @@
 
     vm.doAddInventory = function() {
       vm.formError = "";
-     var uploadUrl = '/api/addInventory';
-    multipartForm.post(uploadUrl, vm.credentials).then(function(){
-         
-        });
+  return $http.post('/api/addInventory',vm.credentials).success(function(data){
+console.log(data);
     };
 
   

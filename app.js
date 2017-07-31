@@ -28,7 +28,6 @@ var appClientFiles = [
   'app_client/productFolder/productFolderController.js',
   'app_client/registerFolder/registerFolderController.js',
   'app_client/loginFolder/loginFolderController.js',
-  'app_client/common/services/mutipartFile.js',
   'app_client/inventoryFolder/postFolder/postFolderController.js'
 ];
 var uglified = uglifyJs.minify(appClientFiles, { compress : false });
