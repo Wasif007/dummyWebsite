@@ -32,6 +32,7 @@
         return false;
      
       } else {
+      	console.log("HELOOW WPR");
         vm.doAddInventory();
       }
     };
