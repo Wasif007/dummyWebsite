@@ -7,9 +7,9 @@ var sendJSONresponse = function(res, status, content) {
 };
 
 module.exports.inventoryList = function(req, res) {
-  Inv.find({}, function(err, docs) {
+  Inv.find({}, function(err, inventoryDocs) {
     if (!err){ 
-sendJSONresponse(res,200,docs);
+sendJSONresponse(res,200,inventoryDocs);
     } else {
     	throw err;
     }
