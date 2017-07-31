@@ -44,7 +44,7 @@
         controller:'loginCtrl',
         controllerAs:'vm'
       })
-      .when('addingInventoryForm',{
+      .when('/addingInventoryForm',{
         templateUrl:'/inventoryFolder/postFolder/postFolderView.html',
         controller:'postInventoryCtrl',
         controllerAs:'vm'
