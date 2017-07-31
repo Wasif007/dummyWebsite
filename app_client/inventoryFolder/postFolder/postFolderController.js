@@ -6,7 +6,7 @@
 
     postInventoryCtrl.$inject = ['$http'];
 
-  function postInventoryCtrl(authentication,multipartForm,$location) {
+  function postInventoryCtrl($http) {
     var vm = this;
 
     vm.credentials = {
