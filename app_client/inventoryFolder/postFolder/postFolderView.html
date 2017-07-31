@@ -18,32 +18,38 @@
 
           <fieldset class="register-group">
               
-               <div>
-               <span>Upload Guard Image</span>
-               <input name="file" type="file" file-model="vm.credentials.file" ng-model="vm.credentials.file"/>
-            </div>
-             
+              
             <label>
               Name
               <input type="text" name="name" placeholder="Full name" required ng-model="vm.credentials.name">
             </label>
 
             <label>
-              Email
-              <input type="text" name="email" placeholder="Email" required ng-model="vm.credentials.email">
+              Quantity
+              <input type="text" name="quantity" placeholder="Quantity In Stock" required ng-model="vm.credentials.quantity">
             </label>
             <label>
-              Phone No
-              <input type="text" name="phone" placeholder="Phone No." required ng-model="vm.credentials.phone">
+              Size
+              <input type="text" name="size" placeholder="Size No." required ng-model="vm.credentials.size">
             </label>
              <label>
-              Home Address 
-              <input type="text" name="home_address" placeholder="Address" required ng-model="vm.credentials.home_address">
+              Colour 
+              <input type="text" name="colour" placeholder="Colour" required ng-model="vm.credentials.colour">
             </label>
 
              <label>
-              Code 
-              <input type="text" name="code" placeholder="Code For Guard" required ng-model="vm.credentials.code">
+              Article 
+              <input type="text" name="article" placeholder="Article Number" required ng-model="vm.credentials.article">
+            </label>
+
+            <label>
+              Article_Type
+              <input type="text" name="article_type" placeholder="Magic or Tasma" required ng-model="vm.credentials.article_type">
+            </label>
+
+            <label>
+              Price 
+              <input type="text" name="price" placeholder="Price" required ng-model="vm.credentials.price">
             </label>
          
 
