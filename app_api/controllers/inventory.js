@@ -37,9 +37,11 @@ module.exports.inventoryAdd = function(req, res) {
 };
 
 module.exports.inventoryDelete = function(req, res) {
- sendJSONresponse(res,200,{
- 	"Message":"Hello Delete"
- })
+  Inv.remove({}, function(err,removed) {
+sendJSONresponse(res,200,{
+	"Message":" Deleted all data"
+})
+});
 };
 
 module.exports.inventoryUpdate = function(req, res) {
