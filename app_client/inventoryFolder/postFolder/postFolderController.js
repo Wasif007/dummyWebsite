@@ -4,14 +4,8 @@
     .module('loc8rApp')
     .controller('postInventoryCtrl', postInventoryCtrl);
 
-    postInventoryCtrl.$inject = ['postingInventory'];
-
-  function postInventoryCtrl(postingInventory) {
-    var vm = this;
-
-
-  
-
+   postInventoryCtrl.$inject = ['$scope', 'loc8rData', 'geolocation'];
+  function postInventoryCtrl ($scope, loc8rData, geolocation) {
+   
   }
-
 })();
