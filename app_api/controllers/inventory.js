@@ -7,7 +7,13 @@ var sendJSONresponse = function(res, status, content) {
 };
 
 module.exports.inventoryList = function(req, res) {
-  
+  Inv.find({}, function(err, docs) {
+    if (!err){ 
+sendJSONresponse(res,200,docs);
+    } else {
+    	throw err;
+    }
+});
 };
 
 module.exports.inventoryAdd = function(req, res) {
