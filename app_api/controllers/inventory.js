@@ -63,7 +63,13 @@ module.exports.inventoryUpdate = function(req, res) {
       docs.size=req.body.size,
       docs.price=req.body.price,
       docs.colour=req.body.colour
-return sendJSONresponse(res,200,docs);
+       docs.save(function(err, inventoryDoc) {
+          if (err) {
+            sendJSONresponse(res, 404, err);
+          } else {
+            sendJSONresponse(res, 200, inventoryDoc);
+          }
+        });
     } else {
  return sendJSONresponse(res,404,{
 "Message":"Something Went Wrong"
