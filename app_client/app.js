@@ -49,6 +49,11 @@
         controller:'postInventoryCtrl',
         controllerAs:'vm'
       })
+      .when('/deletingInventoryForm',{
+        templateUrl:'/inventoryFolder/deleteFolder/deleteFolderView.html',
+        controller:'deleteInventoryCtrl',
+        controllerAs:'vm'
+      })
       .otherwise({redirectTo: '/'});
 
     // use the HTML5 History API
