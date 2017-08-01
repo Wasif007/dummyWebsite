@@ -54,6 +54,11 @@
         controller:'deleteInventoryCtrl',
         controllerAs:'vm'
       })
+      .when('/gettingInventoryForm',{
+        templateUrl:'/inventoryFolder/getFolder/getFolderView.html',
+        controller:'getInventoryCtrl',
+        controllerAs:'vm'
+      })
       .otherwise({redirectTo: '/'});
 
     // use the HTML5 History API
