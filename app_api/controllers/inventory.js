@@ -56,6 +56,13 @@ module.exports.inventoryUpdate = function(req, res) {
       })
     }
     if (docs){ 
+      docs.name=req.body.name,
+      docs.quantity=req.body.quantity,
+      docs.article=req.body.article,
+      docs.article_type=req.body.article_type,
+      docs.size=req.body.size,
+      docs.price=req.body.price,
+      docs.colour=req.body.colour
 return sendJSONresponse(res,200,docs);
     } else {
  return sendJSONresponse(res,404,{
