@@ -45,7 +45,29 @@ sendJSONresponse(res,200,{
 };
 
 module.exports.inventoryUpdate = function(req, res) {
- sendJSONresponse(res,200,{
- 	"Message":"Hello Update"
- })
+ if(req.params.article)
+  
+  {
+  Inv.findOne({article:req.params.article}, function(err, docs) {
+    if(!docs)
+    {
+      return sendJSONresponse(res,401,{
+        "Message":"No stock found"
+      })
+    }
+    if (docs){ 
+return sendJSONresponse(res,200,docs);
+    } else {
+ return sendJSONresponse(res,404,{
+"Message":"Something Went Wrong"
+});
+    }
+});
+  }
+  else
+  {
+    sendJSONresponse(res,404,{
+      "Message":"Article provided is not in DataBase"
+    })
+  }
 };
