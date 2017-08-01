@@ -59,6 +59,7 @@
         controller:'getInventoryCtrl',
         controllerAs:'vm'
       })
+      
       .otherwise({redirectTo: '/'});
 
     // use the HTML5 History API
