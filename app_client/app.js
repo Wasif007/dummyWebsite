@@ -14,19 +14,10 @@
         controller: 'aboutCtrl',
         controllerAs: 'vm'
       })
-      .when('/blog', {
-        templateUrl: '/blogFolder/blogFolderView.html',
-        controller: 'blogCtrl',
-        controllerAs: 'vm'
-      })
+      
       .when('/contact',{
         templateUrl:'/contactFolder/contactFolderView.html',
         controller:'contactCtrl',
-        controllerAs:'vm'
-      })
-     .when('/detail',{
-        templateUrl:'/detailFolder/detailFolderView.html',
-        controller:'detailCtrl',
         controllerAs:'vm'
       })
       .when('/product',{
