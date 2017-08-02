@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-const nodemailer = require('nodemailer');
+var  nodemailer = require('nodemailer');
 
 
 var sendJSONresponse = function(res, status, content) {
@@ -17,7 +17,7 @@ var smtpTransport = nodemailer.createTransport("SMTP",{
 });
 
 // setup email data with unicode symbols
-let mailOptions = {
+var  mailOptions = {
     from: req.body.email, // sender address
     to: 'wasifateeq007@hotmail.com', // list of receivers
     subject: 'Flying Horse', // Subject line
