@@ -44,19 +44,9 @@
         controller:'loginCtrl',
         controllerAs:'vm'
       })
-      .when('/addingInventoryForm',{
-        templateUrl:'/inventoryFolder/postFolder/postFolderView.html',
-        controller:'postInventoryCtrl',
-        controllerAs:'vm'
-      })
-      .when('/deletingInventoryForm',{
-        templateUrl:'/inventoryFolder/deleteFolder/deleteFolderView.html',
-        controller:'deleteInventoryCtrl',
-        controllerAs:'vm'
-      })
-      .when('/gettingInventoryForm',{
-        templateUrl:'/inventoryFolder/getFolder/getFolderView.html',
-        controller:'getInventoryCtrl',
+      .when('/single',{
+        templateUrl:'/singleFolder/singleFolderView.html',
+        controller:'singleCtrl',
         controllerAs:'vm'
       })
       
