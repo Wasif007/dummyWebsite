@@ -17,6 +17,4 @@ sendmail({
     console.log(err && err.stack);
     console.dir(reply);
 });
-return
-sendJSONresponse(res,200,{"message":" Mail send"});
 };
