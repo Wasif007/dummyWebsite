@@ -21,7 +21,7 @@ var  mailOptions = {
     from: req.body.email, // sender address
     to: 'wasifateeq007@hotmail.com', // list of receivers
     subject: 'Flying Horse', // Subject line
-    text: "Name is "+req.body.name+" Message is ":req.body.message, // plain text body
+    text: req.body.message // plain text body
      // html body
 };
 
@@ -33,6 +33,5 @@ smtpTransport.sendMail(mailOptions, function(error, response){
         console.log("Message sent: " + response.message);
     }
 });
-  return sendJSONresponse(res,200,{"Message ":req.body.name+" "+req.body.email+" "+req.body.message});
-
+ 
 };
