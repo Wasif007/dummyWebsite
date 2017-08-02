@@ -39,7 +39,7 @@
         controller:'registerCtrl',
         controllerAs:'vm'
       })
-      .when('/login',{
+      .when('/signup',{
         templateUrl:'/loginFolder/loginFolderView.html',
         controller:'loginCtrl',
         controllerAs:'vm'
