@@ -8,8 +8,6 @@ var sendJSONresponse = function(res, status, content) {
 };
 module.exports.sendingEmail = function(req, res) {
 
-
-
 sendmail({
     from: req.body.email, // sender address
     to: "ar1363721@gmail.com", // list of receivers
@@ -19,5 +17,6 @@ sendmail({
     console.log(err && err.stack);
     console.dir(reply);
 });
-
+return
+sendJSONresponse(res,200,{"message":" Mail send"});
 };
