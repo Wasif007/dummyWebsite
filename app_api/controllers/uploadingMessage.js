@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
-var nodemailer = require('nodemailer');
+
+var mail = require("nodemailer").mail;
 
 
 var sendJSONresponse = function(res, status, content) {
@@ -8,12 +9,10 @@ var sendJSONresponse = function(res, status, content) {
 };
 module.exports.sendingEmail = function(req, res) {
 
-var transporter = nodemailer.createTransport();
-transporter.sendMail({
-    from: req.body.email,
-    to: 'ar1363721@gmail.com',
-    subject: req.body.name,
-    text: req.body.message
+mail({
+    from: req.body.email, // sender address
+    to: "ar1363721@gmail.com", // list of receivers
+    subject: req.body.name, // Subject line
+    text: req.body.message // html body
 });
- 
 };
