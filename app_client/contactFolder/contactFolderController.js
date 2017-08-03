@@ -15,6 +15,7 @@
    
    vm.onSubmittion=function()
    {
+   	console.log("HELOO WASDASD");
       if(!vm.credentials.name || !vm.credentials.email 
     || !vm.credentials.message)
   {
