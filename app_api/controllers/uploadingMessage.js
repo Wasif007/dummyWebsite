@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var sendmail = require('sendmail')();
+var nodemailer = require('nodemailer');
  
 var sendJSONresponse = function(res, status, content) {
   res.status(status);
@@ -8,13 +8,33 @@ var sendJSONresponse = function(res, status, content) {
 };
 module.exports.sendingEmail = function(req, res) {
 
-sendmail({
-    from: req.body.email, // sender address
-    to: "ar1363721@gmail.com", // list of receivers
+
+
+function handleSayHello(req, res) {
+    // Not the movie transporter!
+    var transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        auth: {
+            user: 'ar1363721@gmail.com', // Your email id
+            pass: 'wasifateeq0' // Your password
+        }
+    });
+var mailOptions = {
+    from: 'ar1363721@gmail.com>', // sender address
+    to: req.body.email, // list of receivers
     subject: req.body.name, // Subject line
-    text: req.body.message ,// html body,
-  }, function(err, reply) {
-    console.log(err && err.stack);
-    console.dir(reply);
+    text: req.body.message //, // plaintext body
+    // html: '<b>Hello world ✔</b>' // You can choose to send an HTML body instead
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+    if(error){
+        console.log(error);
+        res.json({yo: 'error'});
+    }else{
+        console.log('Message sent: ' + info.response);
+        res.json({yo: info.response});
+    };
 });
+
 };
