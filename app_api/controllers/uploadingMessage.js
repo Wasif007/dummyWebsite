@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var nodemailer = require('nodemailer');
- 
+ var popupS = require('popups');
 var sendJSONresponse = function(res, status, content) {
   res.status(status);
   res.json(content);
@@ -30,7 +30,8 @@ transporter.sendMail(mailOptions, function(error, info){
         console.log(error);
         res.json({yo: 'error'});
     }else{
-       sendJSONresponse(res, 200, {"Message":" Email send"});
-    };
+popupS.alert({
+    content: 'Message Delievered'
+});    };
 });
 };
