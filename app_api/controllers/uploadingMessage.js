@@ -30,7 +30,8 @@ transporter.sendMail(mailOptions, function(error, info){
         console.log(error);
         res.json({yo: 'error'});
     }else{
-        swal("Hello world!");
+        console.log('Message sent: ' + info.response);
+        res.json({yo: info.response});
     };
 });
 };
