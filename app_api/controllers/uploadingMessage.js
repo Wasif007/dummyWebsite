@@ -18,9 +18,9 @@ module.exports.sendingEmail = function(req, res) {
 
 var mailOptions = {
     from: req.body.email, // sender address
-    to: req.body.email, // list of receivers
-    subject:req.body.name, // Subject line
-    text: req.body.message //, // plaintext body
+    to: 'wasifateeq007@hotmail.com', // list of receivers
+    subject:req.body.email, // Subject line
+    text:"Name is "+req.body.name+" Message is " +req.body.message //, // plaintext body
     // html: '<b>Hello world ✔</b>' // You can choose to send an HTML body instead
 };
 
