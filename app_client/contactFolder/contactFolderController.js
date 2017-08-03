@@ -16,20 +16,14 @@
 
    vm.onSubmittion=function()
    {
-   	vm
+   	
       if(!vm.credentials.time || !vm.credentials.email 
-    || !vm.credentials.message   
-   )
-  {
+    || !vm.credentials.message )
+ {
      vm.formError = "All fields required, please try again"
          return false;
-     
+ }    
       }
-      else {
-        send
-      }
- 
-   }
    
 
 
