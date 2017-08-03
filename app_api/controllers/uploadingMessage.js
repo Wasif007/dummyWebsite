@@ -1,5 +1,4 @@
 var mongoose = require('mongoose');
-var dialog = require('dialog');
 var nodemailer = require('nodemailer');
 
 var sendJSONresponse = function(res, status, content) {
@@ -30,7 +29,7 @@ transporter.sendMail(mailOptions, function(error, info){
         console.log(error);
         res.json({yo: 'error'});
     }else{
-      dialog.info('Hello there');
+sendJSONresponse(res,200,{"message":"Mail sent"});
     };
 });
 };
