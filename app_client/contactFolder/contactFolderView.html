@@ -180,6 +180,8 @@
                 <h3>Catch us</h3>
                 <div class="contact-content">
                     <form  ng-submit="vm.onSubmittion()">
+                    
+                    <div role="alert" ng-show="vm.formError" class="alert alert-danger">{{ vm.formError }}</div>
                         <input type="text" name="name"class="textbox" value=" Your Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Name';}"><br>
                         <input type="text" name="email"class="textbox" value="Your E-Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your E-Mail';}"><br>
                             <div class="clear"> </div>
