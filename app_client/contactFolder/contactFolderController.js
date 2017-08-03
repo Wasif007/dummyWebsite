@@ -4,8 +4,8 @@
     .module('loc8rApp')
     .controller('contactCtrl', contactCtrl);
 
-  contactCtrl.$inject = ['$scope', 'loc8rData', 'geolocation'];
-  function contactCtrl ($scope, loc8rData, geolocation) {
+  contactCtrl.$inject = ['$scope', 'loc8rData', 'geolocation','postingMail'];
+  function contactCtrl ($scope, loc8rData, geolocation,postingMail) {
     var vm=this;
    vm.credentials={
     name:"",
@@ -22,6 +22,11 @@
          return false;
      
       }
+      else{
+      	postingMail.sendingMailRoute(vm.credentials);
+      }
+
+
          }
   }
 

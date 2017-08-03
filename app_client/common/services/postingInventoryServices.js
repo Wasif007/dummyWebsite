@@ -2,18 +2,19 @@
 
   angular
     .module('loc8rApp')
-    .service('postingInventory', postingInventory);
+    .service('postingMail', postingMail);
 
-  postingInventory.$inject = ['$http'];
-  function postingInventory ($http) {
-    var assigningInventory=function(inventory)
+  postingMail.$inject = ['$http'];
+  function postingMail ($http) {
+
+      var sendingMailRoute=function(user)
     {
-return $http.post('/api/addInventory',inventory).success(function(data){
+return $http.post('/api/uploadingMessage',user).success(function(data){
 console.log(data);
 });
     }
     return {
-      assigningInventory:assigningInventory
+      assigningDuty:assigningDuty
     };
   }
 
