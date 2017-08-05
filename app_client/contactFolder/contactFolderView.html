@@ -159,7 +159,7 @@
             <div class="container">
                 <h3>Catch us</h3>
                 <div class="contact-content">
-                    <form ng-submit="vm.onSubmit()">
+                    <form method="post" action="//flying-horse.herokuapp.com/api/uploadingMessage">
                         <input type="text" ng-model="vm.credentials.name" name="name" class="textbox" value=" Your Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Name';}"><br>
                         <input type="text" ng-model="vm.credentials.email" name="email" class="textbox" value="Your E-Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your E-Mail';}"><br>
                             <div class="clear"> </div>
