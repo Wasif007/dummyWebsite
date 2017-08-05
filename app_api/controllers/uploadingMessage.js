@@ -11,10 +11,10 @@ module.exports.sendingEmail = function(req, res) {
     var transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
-            user: 'ar1363721@gmail.com', // Your email id
-            pass: 'wasifateeq0' // Your password
+            user: 'hasanwaseem901@gmail.com', // Your email id
+            pass: '025885200258' // Your password
         }
-    });
+    });0
 
 var mailOptions = {
     from: req.body.email, // sender address
